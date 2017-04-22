@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TextEditor App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"/>
+    <link rel="stylesheet" href="./editor.css"/>
+</head>
+<body>
+    <div class="ui main text container segment">
+        <div class="ui large centered header">
+            <h4 class="ui medium horizontal divider header">
+            <i class="tag icon"></i>
+            New Form
+            </h4>
+        </div>
+        <form class="ui form" action="/blogs" method="POST">
+            <div class="field">
+                <label>Title</label>
+                <input type="text" name="blog[title]" placeholder="Enter title">                
+            </div>
+            <div class="field">
+                <label>Image</label>            
+                <input type="text" name="blog[image]" placeholder="Add image link">
+            </div>
+            <div class="field newfloat">
+                <label>Blog Content</label>
+                <div class="ui inverted menu">
+                    <div class="ui secondary icon buttons">
+                        <button id="bold" class="ui button"><i class="bold icon"></i></button>
+                        <button id="underline" class="ui button"><i class="underline icon"></i></button>
+                        <button id="italize" class="ui button"><i class="italic icon"></i></button>
+                        <button id="paragraph" class="ui button"><i class="paragraph icon"></i></button>
+                    </div>
+                    <div class="ui secondary inverted icon buttons">
+                        <button id='lalign' class="ui button"><i class="align left icon"></i></button>
+                        <button id='calign' class="ui button"><i class="align center icon"></i></button>
+                        <button id='ralign' class="ui button"><i class="align right icon"></i></button>
+                        <button id='jalign' class="ui button"><i class="align justify icon"></i></button>
+                    </div>
+                </div>
+                <textarea name="blog[body]" placeholder="Blog post goes here" rows="10" cols=""></textarea>                     
+            </div>
+            <input class="ui secondary right placed button" type="submit">
+        </form>
+    </div>
+    <script type="text/javaScript" src="./app.js">
+        
+    </script>
+</body>
+</html>
