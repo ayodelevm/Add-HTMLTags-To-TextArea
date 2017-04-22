@@ -1,0 +1,13 @@
+.ui.segment:first-child {
+    margin-top: 3.0em;
+}
+
+.ui.menu {
+    margin: 0;
+}
+
+.ui[class*="right floated"].button, 
+.ui[class*="right floated"].buttons {
+    clear: both;
+    align-items: flex-start;
+}
