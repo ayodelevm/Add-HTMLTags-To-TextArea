@@ -8,7 +8,6 @@ var rightAlign = document.querySelector('#ralign');
 var centerAlign = document.querySelector('#calign');
 var justify = document.querySelector('#jalign');
 var btext = '', utext = '', itext = '', lalign ='', ralign='', calign ='', jalign ='';
-//console.log(text);
 
 textToChange = (elem=textarea)=>{
     elem.addEventListener('select', (e)=>{
@@ -19,9 +18,6 @@ textToChange = (elem=textarea)=>{
         ralign = `<span style="text-align: right;">${window.getSelection().toString().trim()}</span>`;
         calign = `<span style="text-align: center;">${window.getSelection().toString().trim()}</span>`;
         jalign = `<span style="text-align: justify;">${window.getSelection().toString().trim()}</span>`;
-        
-        //console.log(text);
-        //return text
     });
 }
 
@@ -36,8 +32,6 @@ function getInputSelection(elem){
 
 function replaceSelectedText(elem, newText){
     var sel = getInputSelection(elem), val = elem.value;
-    console.log(val);    
-    console.log(newText);    
     elem.value = val.slice(0, sel.start) + newText + val.slice(sel.end);
     btext = '', utext = '', itext = '', lalign ='', ralign='', calign ='', jalign ='';
 }
